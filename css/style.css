@@ -384,3 +384,62 @@ section {
         grid-template-columns: 1fr;
     }
 }
+/* ============================================
+   СЕКЦИЯ КОНТАКТЫ (CONTACTS)
+   ============================================ */
+.contacts {
+    background-color: var(--color-bg);
+}
+
+.contacts__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.contacts__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contacts__title {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    color: var(--color-text-primary);
+}
+
+.contacts__text {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.contacts__text strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+.contacts__link {
+    color: var(--color-brand);
+}
+
+.contacts__link:hover {
+    color: var(--color-brand-hover);
+}
+
+.contacts__map {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .contacts__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
