@@ -175,3 +175,65 @@ section {
     color: var(--color-text-secondary);
     font-size: 14px;
 }
+/* ============================================
+   СЕКЦИЯ О НАС (ABOUT)
+   ============================================ */
+.about {
+    background-color: var(--color-bg-card); /* Чуть светлее фона, для контраста */
+}
+
+.about__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.about__text p {
+    font-size: 18px;
+    color: var(--color-text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.about__features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: var(--color-bg); /* Тёмный фон для карточек */
+    border-radius: 16px;
+    border: 1px solid rgba(245, 240, 230, 0.1);
+}
+
+.feature__icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.feature__title {
+    font-family: var(--font-body); /* Для карточек используем Inter, не Playfair */
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-text-primary);
+}
+
+.feature__desc {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .about__content {
+        grid-template-columns: 1fr; /* Одна колонка на планшетах */
+        gap: 40px;
+    }
+}
