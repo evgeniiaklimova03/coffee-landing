@@ -179,7 +179,40 @@
         <section class="booking" id="booking">
             <div class="container">
                 <h2 class="section-title">Забронировать столик</h2>
-                <!-- Здесь будет форма -->
+                <div class="booking__wrapper">
+                    <p class="booking__subtitle">Оставьте заявку, и мы забронируем для вас лучший столик</p>
+                    <form class="booking__form" action="https://formspree.io/f/xppdkgwp" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Ваше имя *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Иван Иванов" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="form-label">Дата и время</label>
+                            <input type="datetime-local" id="date" name="date" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests" class="form-label">Количество гостей</label>
+                            <select id="guests" name="guests" class="form-input">
+                                <option value="1">1 гость</option>
+                                <option value="2">2 гостя</option>
+                                <option value="3">3 гостя</option>
+                                <option value="4">4 гостя</option>
+                                <option value="5+">5 и более</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent" class="form-checkbox-label">
+                                Я согласен на обработку персональных данных
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn--primary booking__submit">Забронировать столик</button>
+                    </form>
+                </div>
             </div>
         </section>
 
