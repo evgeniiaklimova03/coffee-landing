@@ -345,3 +345,42 @@ section {
     color: var(--color-brand); /* Медный акцент */
     margin: 0 24px 24px;
 }
+/* ============================================
+   СЕКЦИЯ ГАЛЕРЕЯ (GALLERY)
+   ============================================ */
+.gallery {
+    background-color: var(--color-bg-card); /* Чуть светлее фона */
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 48px auto 0 auto; /* Верхний отступ 48px, остальные auto (центрирует) */
+    max-width: 900px;
+    width: 100%;
+}
+
+.gallery__item {
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3; /* Фото чуть шире квадрата */
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery__item:hover .gallery__img {
+    transform: scale(1.05); /* Легкий зум при наведении */
+}
+
+/* Адаптивность: на мобильных — одна колонка */
+@media (max-width: 768px) {
+    .gallery__grid {
+        grid-template-columns: 1fr;
+    }
+}
